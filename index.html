@@ -370,16 +370,16 @@
 
       <div class="demo-form-wrapper fade-up stagger-2">
 
-        <!-- Formulario (no envía datos reales) -->
-        <form id="demo-form" novalidate aria-label="Formulario de solicitud de demo">
+        <!-- Formulario -->
+        <form id="demo-form" action="https://formspree.io/f/mkoebaqy" method="POST" novalidate aria-label="Formulario de solicitud de demo">
 
           <!-- Nombre -->
           <div class="form-group">
             <label for="field-nombre" class="form-label">Nombre completo *</label>
-            <input type="text"
+            <input type="text" name="nombre" 
                    id="field-nombre"
                    class="form-input"
-                   placeholder="Ej: Camila Torres"
+                   placeholder="Ej: Luis Torres"
                    autocomplete="name"
                    required />
           </div>
@@ -387,7 +387,7 @@
           <!-- Empresa -->
           <div class="form-group">
             <label for="field-empresa" class="form-label">Empresa u organización *</label>
-            <input type="text"
+            <input type="text" name="empresa"
                    id="field-empresa"
                    class="form-input"
                    placeholder="Ej: Consultora Ambiental S.A."
@@ -398,7 +398,7 @@
           <!-- Correo -->
           <div class="form-group">
             <label for="field-correo" class="form-label">Correo electrónico *</label>
-            <input type="email"
+            <input type="email" name="correo"
                    id="field-correo"
                    class="form-input"
                    placeholder="correo@empresa.cl"
@@ -414,32 +414,32 @@
             <div class="checkbox-grid" role="group" aria-labelledby="modules-label">
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo" value="biodiversidad" />
+                <input type="checkbox" name="modulo[]" value="biodiversidad" />
                 <span class="checkbox-label">Foli<span class="os-white">OS</span> Biodiversidad</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo" value="agua" />
+                <input type="checkbox" name="modulo[]" value="agua" />
                 <span class="checkbox-label">Foli<span class="os-white">OS</span> Agua</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo" value="sinader" />
+                <input type="checkbox" name="modulo[]" value="sinader" />
                 <span class="checkbox-label">Foli<span class="os-white">OS</span> SINADER</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo" value="rep" />
+                <input type="checkbox" name="modulo[]" value="rep" />
                 <span class="checkbox-label">Foli<span class="os-white">OS</span> REP</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo" value="data" />
+                <input type="checkbox" name="modulo[]" value="data" />
                 <span class="checkbox-label">Foli<span class="os-white">OS</span> Data</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo" value="documental" />
+                <input type="checkbox" name="modulo[]" value="documental" />
                 <span class="checkbox-label">Foli<span class="os-white">OS</span> Documental</span>
               </label>
 
