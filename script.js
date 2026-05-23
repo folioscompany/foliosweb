@@ -142,58 +142,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  if (demoForm) {
-    demoForm.addEventListener('submit', (e) => {
+if (demoForm) {
+  demoForm.addEventListener('submit', (e) => {
+    const nombre  = demoForm.querySelector('#field-nombre');
+    const empresa = demoForm.querySelector('#field-empresa');
+    const correo  = demoForm.querySelector('#field-correo');
+    let valid = true;
+
+    [nombre, empresa, correo].forEach(field => {
+      if (!field) return;
+      if (!field.value.trim()) {
+        field.style.borderColor = '#ff453a';
+        valid = false;
+        field.addEventListener('input', () => {
+          field.style.borderColor = '';
+        }, { once: true });
+      }
+    });
+
+    if (correo && correo.value && !/\S+@\S+\.\S+/.test(correo.value)) {
+      correo.style.borderColor = '#ff453a';
+      valid = false;
+    }
+
+    if (!valid) {
       e.preventDefault();
 
-      // Validación básica de campos requeridos
-      const nombre  = demoForm.querySelector('#field-nombre');
-      const empresa = demoForm.querySelector('#field-empresa');
-      const correo  = demoForm.querySelector('#field-correo');
-      let valid = true;
-
-      [nombre, empresa, correo].forEach(field => {
-        if (!field) return;
-        if (!field.value.trim()) {
-          field.style.borderColor = '#ff453a';
-          valid = false;
-          // Restaurar borde al escribir
-          field.addEventListener('input', () => {
-            field.style.borderColor = '';
-          }, { once: true });
-        }
-      });
-
-      // Validar email básico
-      if (correo && correo.value && !/\S+@\S+\.\S+/.test(correo.value)) {
-        correo.style.borderColor = '#ff453a';
-        valid = false;
+      const submitBtn = demoForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.style.animation = 'shake 0.4s ease';
+        setTimeout(() => { submitBtn.style.animation = ''; }, 400);
       }
 
-      if (!valid) {
-        // Sacudir el botón para indicar error
-        const submitBtn = demoForm.querySelector('button[type="submit"]');
-        if (submitBtn) {
-          submitBtn.style.animation = 'shake 0.4s ease';
-          setTimeout(() => { submitBtn.style.animation = ''; }, 400);
-        }
-        return;
-      }
+      return;
+    }
 
-      // Simular envío: ocultar formulario y mostrar éxito
-      demoForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-      demoForm.style.opacity = '0';
-      demoForm.style.transform = 'translateY(-16px)';
-
-      setTimeout(() => {
-        demoForm.style.display = 'none';
-        if (formSuccess) {
-          formSuccess.classList.add('show');
-          formSuccess.style.animation = 'fadeInUp 0.6s ease forwards';
-        }
-      }, 400);
-    });
-  }
+    // Si todo está válido, NO usamos preventDefault.
+    // El formulario se envía normalmente a Formspree.
+  });
+}
 
 
   /* ──────────────────────────────────────────────────────────
