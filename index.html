@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FoliOS — Sistema operativo para automatización de cumplimiento ambiental. Transforma datos y documentos en flujos digitales trazables." />
-  <title>FoliOS — Automatización de Cumplimiento Ambiental</title>
+  <meta name="description" content="FoliOS — Infraestructura operacional ambiental. Automatización, validación técnica y trazabilidad para informes, monitoreos y datos regulatorios." />
+  <title>FoliOS — Infraestructura Operacional Ambiental</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Favicon SVG inline -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d6a4f'/><text y='22' x='6' font-size='18' fill='white' font-family='system-ui'>F</text></svg>" />
+
+  <!-- Favicon minimalista monocromático (estilo OS moderno) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0a0a'/><path d='M11 9h10M11 9v14M11 16h7' stroke='%23f5f5f7' stroke-width='2.4' stroke-linecap='round' fill='none'/><circle cx='23' cy='23' r='1.6' fill='%23f5f5f7'/></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0a0a'/><path d='M11 9h10M11 9v14M11 16h7' stroke='%23f5f5f7' stroke-width='2.4' stroke-linecap='round' fill='none'/><circle cx='23' cy='23' r='1.6' fill='%23f5f5f7'/></svg>" />
 </head>
 <body>
 
@@ -17,14 +19,24 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
 
-      <!-- Logo -->
-      <a href="#" class="header-logo" aria-label="FoliOS inicio">Foli<span class="text-green">OS</span></a>
+      <!-- Logo: FoliOS uniforme + glyph -->
+      <a href="#" class="header-logo" aria-label="FoliOS inicio">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <rect width="32" height="32" rx="7" fill="currentColor"/>
+            <path d="M11 9h10M11 9v14M11 16h7" stroke="#f5f5f7" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+            <circle cx="23" cy="23" r="1.6" fill="#f5f5f7"/>
+          </svg>
+        </span>
+        <span class="logo-text">FoliOS</span>
+      </a>
 
       <!-- Navegación escritorio -->
       <nav class="header-nav" aria-label="Navegación principal">
+        <a href="#section-flow">Flujo</a>
         <a href="#section-modules">Módulos</a>
-        <a href="#section-demo">Demo</a>
-        <span class="header-badge">Próximamente</span>
+        <a href="#section-pricing">Modelo</a>
+        <a href="#section-demo">Solicitar validación</a>
       </nav>
 
       <!-- Hamburguesa mobile -->
@@ -39,10 +51,10 @@
 
   <!-- Menú mobile expandido -->
   <nav class="mobile-nav" aria-label="Menú mobile">
+    <a href="#section-flow">Flujo operacional</a>
     <a href="#section-modules">Módulos</a>
-    <a href="#section-demo">Probar Demo</a>
-    <a href="#section-upload">Cargar documentos</a>
-    <a href="#section-value">Propuesta de valor</a>
+    <a href="#section-pricing">Modelo de validación</a>
+    <a href="#section-demo">Solicitar validación</a>
   </nav>
 
 
@@ -51,30 +63,41 @@
   ══════════════════════════════════════════════════════ -->
   <section class="section-hero" id="hero" aria-label="Presentación de FoliOS">
 
-    <!-- Gradiente ambiental decorativo -->
+    <!-- Gradiente decorativo -->
     <div class="hero-gradient" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
 
     <div class="hero-content">
 
       <span class="hero-eyebrow fade-in">
-        Cumplimiento ambiental · Automatización · Trazabilidad
+        Infraestructura operacional · Automatización · Validación técnica
       </span>
 
-      <h1 class="hero-title fade-up">Foli<span class="text-green">OS</span></h1>
+      <h1 class="hero-title fade-up">FoliOS</h1>
 
       <p class="hero-subtitle fade-up stagger-1">
-        Sistema operativo para automatización<br>de cumplimiento ambiental.
+        Infraestructura operacional ambiental.<br>
+        Desde el informe original hasta el entregable final.
       </p>
 
       <p class="hero-description fade-up stagger-2">
-        Transforma datos y documentos ambientales en flujos digitales trazables
-        listos para declarar.
+        Transforma PDFs, informes y monitoreos ambientales en entregables
+        estructurados, validados y trazables. Automatización con validación
+        técnica, no consultoría tradicional.
       </p>
 
       <div class="hero-actions fade-up stagger-3">
-        <a href="#section-demo" class="btn btn-primary">Probar demo</a>
-        <a href="#section-modules" class="btn btn-ghost">Ver módulos</a>
+        <a href="#section-demo" class="btn btn-primary">Solicitar validación técnica</a>
+        <a href="#section-flow" class="btn btn-ghost">Ver cómo funciona</a>
       </div>
+
+      <!-- Tags de tecnología bajo el hero -->
+      <ul class="hero-tags fade-up stagger-4" aria-label="Capacidades clave">
+        <li><span class="dot"></span>Reducción de horas hombre</li>
+        <li><span class="dot"></span>Estandarización de datos</li>
+        <li><span class="dot"></span>Trazabilidad operacional</li>
+        <li><span class="dot"></span>Validación técnica</li>
+      </ul>
 
     </div>
 
@@ -88,24 +111,25 @@
 
 
   <!-- ══════════════════════════════════════════════════════
-       SECCIÓN 2 — NARRATIVA
+       SECCIÓN 2 — NARRATIVA / PROPUESTA DE VALOR
   ══════════════════════════════════════════════════════ -->
   <section class="section-narrative" id="section-narrative" aria-label="Propósito de FoliOS">
     <div class="container">
 
-      <p class="narrative-label fade-in">¿Por qué Foli<span class="text-green">OS</span>?</p>
+      <p class="narrative-label fade-in">¿Por qué FoliOS?</p>
 
       <h2 class="section-title fade-up">
-        De informes a flujos digitales<br>trazables listos para reportar.
+        Menos horas hombre.<br>Más velocidad, control y trazabilidad.
       </h2>
 
       <p class="section-body fade-up stagger-1">
-        Foli<span class="text-green">OS</span> nace para reducir tiempos operativos, errores de carga y fricción
-        en procesos de seguimiento, reportabilidad y gestión ambiental. Una plataforma
-        diseñada por y para equipos ambientales que trabajan con datos reales.
+        FoliOS no es una consultora. Es una capa operacional que automatiza
+        la transformación de información ambiental — PDFs, monitoreos,
+        resoluciones — en entregables estructurados, validados técnicamente
+        y auditables de extremo a extremo.
       </p>
 
-      <!-- Estadísticas animadas -->
+      <!-- Estadísticas -->
       <div class="narrative-stats">
 
         <div class="stat-item fade-up stagger-1">
@@ -113,23 +137,23 @@
                data-count="80"
                data-suffix="%"
                aria-label="Reducción de tiempo operativo">0%</div>
-          <div class="stat-label">Reducción de tiempo operativo</div>
+          <div class="stat-label">Reducción de horas hombre</div>
         </div>
 
         <div class="stat-item fade-up stagger-2">
           <div class="stat-number"
-               data-count="6"
-               data-suffix=" módulos"
-               aria-label="Módulos especializados">0</div>
-          <div class="stat-label">Módulos especializados</div>
+               data-count="4"
+               data-suffix=""
+               aria-label="Módulos operacionales">0</div>
+          <div class="stat-label">Módulos operacionales</div>
         </div>
 
         <div class="stat-item fade-up stagger-3">
           <div class="stat-number"
                data-count="100"
                data-suffix="%"
-               aria-label="Trazabilidad digital">0%</div>
-          <div class="stat-label">Trazabilidad digital</div>
+               aria-label="Trazabilidad de extremo a extremo">0%</div>
+          <div class="stat-label">Trazabilidad end-to-end</div>
         </div>
 
       </div>
@@ -139,244 +163,347 @@
 
 
   <!-- ══════════════════════════════════════════════════════
-       SECCIÓN 3 — MÓDULOS
+       SECCIÓN 3 — FLUJO OPERACIONAL FoliOS
+  ══════════════════════════════════════════════════════ -->
+  <section class="section-flow" id="section-flow" aria-label="Flujo operacional FoliOS">
+    <div class="container">
+
+      <div class="section-header text-center">
+        <p class="narrative-label fade-in">Pipeline</p>
+        <h2 class="section-title fade-up">Flujo operacional FoliOS.</h2>
+        <p class="section-body fade-up stagger-1">
+          Antes de procesar, FoliOS valida técnicamente cada informe, determina su
+          complejidad y emite una cotización. Recién con la aprobación del cliente
+          se inicia el procesamiento.
+        </p>
+      </div>
+
+      <!-- ETAPA 1 — VALIDACIÓN PREVIA -->
+      <div class="flow-stage fade-up stagger-1">
+        <span class="flow-stage-tag">Etapa 1</span>
+        <h3 class="flow-stage-title">Validación técnica y cotización</h3>
+        <p class="flow-stage-desc">
+          Análisis del informe para determinar recursos mínimos, complejidad
+          operacional y cobro por entregable.
+        </p>
+      </div>
+
+      <ol class="flow-pipeline" role="list" aria-label="Etapa de validación técnica">
+
+        <li class="flow-step fade-up stagger-1">
+          <div class="flow-index">01</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Solicitud</h3>
+            <p class="flow-desc">El cliente envía el informe PDF y los datos mínimos del entregable a través del formulario.</p>
+          </div>
+          <div class="flow-tag">Input</div>
+        </li>
+
+        <li class="flow-step fade-up stagger-2">
+          <div class="flow-index">02</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Validación técnica previa</h3>
+            <p class="flow-desc">FoliOS analiza el documento e identifica los recursos mínimos necesarios para elaborar el entregable.</p>
+          </div>
+          <div class="flow-tag">Review</div>
+        </li>
+
+        <li class="flow-step fade-up stagger-3">
+          <div class="flow-index">03</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Análisis de complejidad</h3>
+            <p class="flow-desc">El mismo análisis determina la variable de complejidad operacional del documento.</p>
+          </div>
+          <div class="flow-tag">Score</div>
+        </li>
+
+        <li class="flow-step fade-up stagger-4">
+          <div class="flow-index">04</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Cotización</h3>
+            <p class="flow-desc">Con la variable de complejidad se genera la cotización en UF correspondiente al entregable.</p>
+          </div>
+          <div class="flow-tag">Quote</div>
+        </li>
+
+      </ol>
+
+      <!-- ETAPA 2 — PROCESAMIENTO -->
+      <div class="flow-stage flow-stage-alt fade-up stagger-1">
+        <span class="flow-stage-tag">Etapa 2</span>
+        <h3 class="flow-stage-title">Procesamiento y entrega</h3>
+        <p class="flow-stage-desc">
+          Una vez aprobada la cotización, el informe entra al pipeline de
+          procesamiento automatizado con validación técnica final.
+        </p>
+      </div>
+
+      <ol class="flow-pipeline" role="list" aria-label="Etapa de procesamiento">
+
+        <li class="flow-step fade-up stagger-1">
+          <div class="flow-index">05</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Aprobación y carga</h3>
+            <p class="flow-desc">Tras la aprobación del cliente, el informe se carga formalmente al pipeline operacional.</p>
+          </div>
+          <div class="flow-tag">Confirm</div>
+        </li>
+
+        <li class="flow-step fade-up stagger-2">
+          <div class="flow-index">06</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Procesamiento automatizado</h3>
+            <p class="flow-desc">Agentes especializados procesan, extraen y estructuran la información del informe aprobado.</p>
+          </div>
+          <div class="flow-tag">Compute</div>
+        </li>
+
+        <li class="flow-step fade-up stagger-3">
+          <div class="flow-index">07</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Validación técnica final</h3>
+            <p class="flow-desc">Revisión técnica del entregable y trazabilidad de cada dato procesado.</p>
+          </div>
+          <div class="flow-tag">QA</div>
+        </li>
+
+        <li class="flow-step fade-up stagger-4">
+          <div class="flow-index">08</div>
+          <div class="flow-content">
+            <h3 class="flow-title">Entrega final</h3>
+            <p class="flow-desc">Entregable validado disponible para el cliente con metadata y log de procesamiento.</p>
+          </div>
+          <div class="flow-tag">Delivery</div>
+        </li>
+
+      </ol>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECCIÓN 4 — MÓDULOS
   ══════════════════════════════════════════════════════ -->
   <section class="section-modules" id="section-modules" aria-label="Módulos de FoliOS">
     <div class="container">
 
       <div class="section-header">
         <p class="narrative-label fade-in">La plataforma</p>
-        <h2 class="section-title fade-up">Seis módulos.<br>Un ecosistema integrado.</h2>
+        <h2 class="section-title fade-up">Cuatro módulos operacionales.<br>Un único sistema.</h2>
         <p class="section-body fade-up stagger-1">
-          Cada módulo fue diseñado para resolver un dominio específico del
-          cumplimiento ambiental. Trabajan de forma independiente o en conjunto.
+          Foco inicial sobre los dominios de mayor fricción operacional. Cada módulo
+          tiene su normativa, su pipeline y sus entregables estandarizados.
         </p>
       </div>
 
       <!-- Grid de tarjetas -->
       <div class="modules-grid">
 
-        <!-- Biodiversidad -->
+        <!-- 1. Biodiversidad -->
         <article class="module-card fade-up stagger-1" aria-label="Módulo FoliOS Biodiversidad">
-          <div class="module-icon" aria-hidden="true">🌿</div>
-          <span class="module-name">Foli<span class="text-green">OS</span></span>
-          <h3 class="module-title">Biodiversidad</h3>
+          <div class="module-head">
+            <div class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 4C12 4 6 8 5 16c0 0 4 4 9 4 4 0 6-3 6-7 0-3-2-7 0-9z"/>
+                <path d="M5 16c4-3 8-5 13-7"/>
+              </svg>
+            </div>
+            <span class="module-tag">Módulo</span>
+          </div>
+          <h3 class="module-title">FoliOS Biodiversidad</h3>
           <p class="module-desc">
-            Automatización de reportes, matrices y datos asociados a biodiversidad
+            Automatización y estructuración de información asociada a biodiversidad
             y seguimiento ambiental.
           </p>
-          <button class="btn btn-sm btn-outline-dark btn-explore-module"
+          <div class="module-norm" aria-label="Normativa asociada">
+            <span class="norm-label">Normativa</span>
+            <span class="norm-ref">Res. Ex. SMA N°343/2022</span>
+          </div>
+          <button class="module-cta btn-explore-module"
                   data-module="biodiversidad"
                   aria-label="Explorar módulo Biodiversidad">
-            Explorar módulo
+            Solicitar validación →
           </button>
         </article>
 
-        <!-- Agua -->
-        <article class="module-card fade-up stagger-2" aria-label="Módulo FoliOS Agua">
-          <div class="module-icon" aria-hidden="true">💧</div>
-          <span class="module-name">Foli<span class="text-green">OS</span></span>
-          <h3 class="module-title">Agua</h3>
+        <!-- 2. Agua — Seguimiento Ambiental -->
+        <article class="module-card fade-up stagger-2" aria-label="Módulo FoliOS Agua Seguimiento Ambiental">
+          <div class="module-head">
+            <div class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3c3 4 6 7 6 11a6 6 0 1 1-12 0c0-4 3-7 6-11z"/>
+              </svg>
+            </div>
+            <span class="module-tag">Módulo</span>
+          </div>
+          <h3 class="module-title">FoliOS Agua — Seguimiento Ambiental</h3>
           <p class="module-desc">
-            Organización y análisis de datos de calidad de agua, efluentes,
-            autocontroles y monitoreos.
+            Procesamiento y estructuración de monitoreos de calidad y caudal
+            comprometidos en seguimiento ambiental.
           </p>
-          <button class="btn btn-sm btn-outline-dark btn-explore-module"
-                  data-module="agua"
-                  aria-label="Explorar módulo Agua">
-            Explorar módulo
+          <div class="module-norm">
+            <span class="norm-label">Normativa</span>
+            <span class="norm-ref">Res. Ex. SMA N°894/2019</span>
+          </div>
+          <button class="module-cta btn-explore-module"
+                  data-module="agua-seguimiento"
+                  aria-label="Explorar módulo Agua Seguimiento">
+            Solicitar validación →
           </button>
         </article>
 
-        <!-- SINADER -->
-        <article class="module-card fade-up stagger-3" aria-label="Módulo FoliOS SINADER">
-          <div class="module-icon" aria-hidden="true">♻️</div>
-          <span class="module-name">Foli<span class="text-green">OS</span></span>
-          <h3 class="module-title">SINADER</h3>
+        <!-- 3. Agua — SISREL -->
+        <article class="module-card fade-up stagger-3" aria-label="Módulo FoliOS Agua SISREL">
+          <div class="module-head">
+            <div class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19h16"/>
+                <path d="M4 14l4-3 4 4 4-6 4 3"/>
+                <path d="M4 9h16" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+            <span class="module-tag">Módulo</span>
+          </div>
+          <h3 class="module-title">FoliOS Agua — SISREL</h3>
           <p class="module-desc">
-            Apoyo en estructuración y preparación de información para
-            reportabilidad de residuos.
+            Comparación automática entre resultados reportados y umbrales
+            autorizados según RPM. Detección de superaciones, apoyo para
+            identificar necesidad de remuestreo y validación operacional
+            de parámetros.
           </p>
-          <button class="btn btn-sm btn-outline-dark btn-explore-module"
-                  data-module="sinader"
-                  aria-label="Explorar módulo SINADER">
-            Explorar módulo
+          <div class="module-norm">
+            <span class="norm-label">Operación</span>
+            <span class="norm-ref">RPM · Obligaciones de monitoreo</span>
+          </div>
+          <button class="module-cta btn-explore-module"
+                  data-module="agua-sisrel"
+                  aria-label="Explorar módulo Agua SISREL">
+            Solicitar validación →
           </button>
         </article>
 
-        <!-- REP -->
-        <article class="module-card fade-up stagger-4" aria-label="Módulo FoliOS REP">
-          <div class="module-icon" aria-hidden="true">📦</div>
-          <span class="module-name">Foli<span class="text-green">OS</span></span>
-          <h3 class="module-title">REP</h3>
+        <!-- 4. Estandarización 223 -->
+        <article class="module-card fade-up stagger-4" aria-label="Módulo FoliOS Estandarización 223">
+          <div class="module-head">
+            <div class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="3" width="16" height="18" rx="2"/>
+                <path d="M8 8l2 2 4-4"/>
+                <path d="M8 14h8M8 18h6"/>
+              </svg>
+            </div>
+            <span class="module-tag">Módulo</span>
+          </div>
+          <h3 class="module-title">FoliOS Estandarización 223</h3>
           <p class="module-desc">
-            Apoyo en gestión de datos vinculados a obligaciones de Ley REP.
+            Revisión automatizada de cumplimiento documental de informes
+            ambientales cargados en plataforma SMA. Validación estructural,
+            revisión de requisitos mínimos y control de integridad de reportes.
           </p>
-          <button class="btn btn-sm btn-outline-dark btn-explore-module"
-                  data-module="rep"
-                  aria-label="Explorar módulo REP">
-            Explorar módulo
-          </button>
-        </article>
-
-        <!-- Data -->
-        <article class="module-card fade-up stagger-5" aria-label="Módulo FoliOS Data">
-          <div class="module-icon" aria-hidden="true">📊</div>
-          <span class="module-name">Foli<span class="text-green">OS</span></span>
-          <h3 class="module-title">Data</h3>
-          <p class="module-desc">
-            Tabulación, depuración, estandarización y análisis de datos ambientales.
-          </p>
-          <button class="btn btn-sm btn-outline-dark btn-explore-module"
-                  data-module="data"
-                  aria-label="Explorar módulo Data">
-            Explorar módulo
-          </button>
-        </article>
-
-        <!-- Documental -->
-        <article class="module-card fade-up stagger-6" aria-label="Módulo FoliOS Documental">
-          <div class="module-icon" aria-hidden="true">📑</div>
-          <span class="module-name">Foli<span class="text-green">OS</span></span>
-          <h3 class="module-title">Documental</h3>
-          <p class="module-desc">
-            Lectura, extracción y estructuración de información desde informes,
-            permisos y documentos.
-          </p>
-          <button class="btn btn-sm btn-outline-dark btn-explore-module"
-                  data-module="documental"
-                  aria-label="Explorar módulo Documental">
-            Explorar módulo
+          <div class="module-norm">
+            <span class="norm-label">Normativa</span>
+            <span class="norm-ref">Res. Ex. SMA N°223/2015</span>
+          </div>
+          <button class="module-cta btn-explore-module"
+                  data-module="estandarizacion-223"
+                  aria-label="Explorar módulo Estandarización 223">
+            Solicitar validación →
           </button>
         </article>
 
       </div><!-- /modules-grid -->
 
+      <p class="modules-roadmap fade-in">
+        Próximos módulos en roadmap: SINADER, REP, Data y Documental.
+      </p>
+
     </div>
   </section>
 
 
   <!-- ══════════════════════════════════════════════════════
-       SECCIÓN 4 — UPLOAD SIMULADO
+       SECCIÓN 5 — MODELO DE VALIDACIÓN (Pricing)
   ══════════════════════════════════════════════════════ -->
-  <section class="section-upload" id="section-upload" aria-label="Carga de documentos simulada">
+  <section class="section-pricing" id="section-pricing" aria-label="Modelo de validación">
     <div class="container">
 
-      <div class="section-header text-center">
-        <p class="narrative-label fade-in">Prueba en vivo</p>
-        <h2 class="section-title fade-up">Carga tus documentos<br>para automatizar.</h2>
-        <p class="section-body fade-up stagger-1">
-          Selecciona un módulo y carga informes, planillas o documentos
-          para iniciar un flujo de automatización.
+      <div class="pricing-card fade-up">
+
+        <div class="pricing-head">
+          <span class="pricing-eyebrow">Modelo de validación</span>
+          <h2 class="pricing-title">Cobro por entregable.<br>Cotización post-validación.</h2>
+        </div>
+
+        <p class="pricing-body">
+          Cada informe ingresado a FoliOS pasa primero por una validación
+          técnica que determina su complejidad operacional. Con esa variable
+          se emite una cotización por entregable, con valores
+          <strong>desde 2 UF</strong> según complejidad, volumen y tipo
+          de automatización requerida.
         </p>
+
+        <ul class="pricing-points" role="list">
+          <li>
+            <span class="point-dot"></span>
+            <span>Validación técnica previa antes de cualquier procesamiento.</span>
+          </li>
+          <li>
+            <span class="point-dot"></span>
+            <span>Variable de complejidad determinada en el análisis técnico.</span>
+          </li>
+          <li>
+            <span class="point-dot"></span>
+            <span>Cotización emitida por entregable, sin compromiso anticipado.</span>
+          </li>
+          <li>
+            <span class="point-dot"></span>
+            <span>Procesamiento sólo tras aprobación explícita de la cotización.</span>
+          </li>
+        </ul>
+
+        <p class="pricing-note">
+          Este modelo corresponde a la etapa de validación operacional
+          y no representa el pricing definitivo de FoliOS.
+        </p>
+
+        <div class="pricing-cta">
+          <a href="#section-demo" class="btn btn-primary">Solicitar validación técnica</a>
+        </div>
+
       </div>
-
-      <div class="upload-wrapper">
-
-        <!-- Selector de módulo -->
-        <div class="upload-module-select fade-up stagger-2">
-          <label for="upload-module-select" class="form-label">
-            Módulo de procesamiento
-          </label>
-          <select id="upload-module-select"
-                  class="form-select"
-                  aria-label="Selecciona el módulo para procesar documentos">
-            <option value="" disabled selected>Selecciona un módulo…</option>
-            <option value="biodiversidad">FoliOS Biodiversidad</option>
-            <option value="agua">FoliOS Agua</option>
-            <option value="sinader">FoliOS SINADER</option>
-            <option value="rep">FoliOS REP</option>
-            <option value="data">FoliOS Data</option>
-            <option value="documental">FoliOS Documental</option>
-          </select>
-        </div>
-
-        <!-- Área drag & drop -->
-        <div class="upload-area fade-up stagger-3"
-             id="upload-area"
-             role="region"
-             aria-label="Área de carga de archivos"
-             tabindex="0">
-
-          <span class="upload-icon" aria-hidden="true">☁️</span>
-          <p class="upload-title">Arrastra tus documentos aquí</p>
-          <p class="upload-subtitle">o selecciona archivos desde tu equipo</p>
-
-          <button class="btn btn-secondary btn-sm" id="btn-select-files" type="button">
-            Seleccionar archivos
-          </button>
-
-          <!-- Input oculto — solo simulación, no envía datos -->
-          <input type="file"
-                 id="file-input"
-                 multiple
-                 accept=".pdf,.xlsx,.xls,.csv,.docx,.doc,.png,.jpg,.jpeg,.zip"
-                 style="display:none"
-                 aria-hidden="true" />
-
-          <!-- Tipos aceptados -->
-          <div class="upload-types" aria-label="Formatos aceptados">
-            <span class="upload-type-badge">PDF</span>
-            <span class="upload-type-badge">Excel</span>
-            <span class="upload-type-badge">CSV</span>
-            <span class="upload-type-badge">Word</span>
-            <span class="upload-type-badge">Imágenes</span>
-            <span class="upload-type-badge">ZIP</span>
-          </div>
-
-        </div><!-- /upload-area -->
-
-        <!-- Lista de archivos seleccionados (se llena con JS) -->
-        <div class="file-list" id="file-list" aria-live="polite">
-          <p class="file-list-title">Archivos seleccionados</p>
-          <div id="file-list-items"></div>
-        </div>
-
-        <!-- CTA de procesar (simulado) -->
-        <div class="upload-cta">
-          <button class="btn btn-primary"
-                  id="btn-sim-process"
-                  type="button"
-                  style="display:none">
-            Iniciar procesamiento
-          </button>
-          <p class="upload-disclaimer">
-            ⚠️ Esta es una demostración simulada. Los archivos no se envían a ningún servidor.
-          </p>
-        </div>
-
-      </div><!-- /upload-wrapper -->
 
     </div>
   </section>
 
 
   <!-- ══════════════════════════════════════════════════════
-       SECCIÓN 5 — FORMULARIO DEMO
+       SECCIÓN 7 — FORMULARIO DEMO
   ══════════════════════════════════════════════════════ -->
   <section class="section-demo" id="section-demo" aria-label="Formulario de acceso demo">
     <div class="container">
 
       <div class="section-header text-center" style="margin-bottom:48px">
         <p class="narrative-label fade-in" style="color:var(--color-accent-light)">
-          Acceso anticipado
+          Entrada al pipeline
         </p>
-        <h2 class="section-title fade-up">Solicita tu acceso demo.</h2>
+        <h2 class="section-title fade-up">Solicita la validación técnica<br>de tu primer entregable.</h2>
         <p class="section-body fade-up stagger-1">
-          Cuéntanos sobre tu contexto. Usaremos esta información para
-          habilitar el acceso demo más relevante para ti.
+          Carga el informe y los datos mínimos. FoliOS realizará la validación
+          técnica previa, determinará la complejidad y emitirá la cotización
+          correspondiente.
         </p>
       </div>
 
       <div class="demo-form-wrapper fade-up stagger-2">
 
-        <!-- Formulario -->
-        <form id="demo-form" action="https://formspree.io/f/mkoebaqy" method="POST" novalidate aria-label="Formulario de solicitud de demo">
+        <!-- Formulario — Formspree intacto -->
+        <form id="demo-form" action="https://formspree.io/f/mkoebaqy" method="POST" enctype="multipart/form-data" novalidate aria-label="Formulario de solicitud de demo">
 
           <!-- Nombre -->
           <div class="form-group">
             <label for="field-nombre" class="form-label">Nombre completo *</label>
-            <input type="text" name="nombre" 
+            <input type="text" name="nombre"
                    id="field-nombre"
                    class="form-input"
                    placeholder="Ej: Luis Torres"
@@ -409,38 +536,28 @@
           <!-- Módulos de interés -->
           <div class="form-group">
             <p class="form-label" id="modules-label">
-              Uso esperado de la plataforma
+              Módulos de interés
             </p>
             <div class="checkbox-grid" role="group" aria-labelledby="modules-label">
 
               <label class="checkbox-item">
                 <input type="checkbox" name="modulo[]" value="biodiversidad" />
-                <span class="checkbox-label">Foli<span class="os-white">OS</span> Biodiversidad</span>
+                <span class="checkbox-label">FoliOS Biodiversidad</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo[]" value="agua" />
-                <span class="checkbox-label">Foli<span class="os-white">OS</span> Agua</span>
+                <input type="checkbox" name="modulo[]" value="agua-seguimiento" />
+                <span class="checkbox-label">FoliOS Agua — Seguimiento</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo[]" value="sinader" />
-                <span class="checkbox-label">Foli<span class="os-white">OS</span> SINADER</span>
+                <input type="checkbox" name="modulo[]" value="agua-sisrel" />
+                <span class="checkbox-label">FoliOS Agua — SISREL</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="modulo[]" value="rep" />
-                <span class="checkbox-label">Foli<span class="os-white">OS</span> REP</span>
-              </label>
-
-              <label class="checkbox-item">
-                <input type="checkbox" name="modulo[]" value="data" />
-                <span class="checkbox-label">Foli<span class="os-white">OS</span> Data</span>
-              </label>
-
-              <label class="checkbox-item">
-                <input type="checkbox" name="modulo[]" value="documental" />
-                <span class="checkbox-label">Foli<span class="os-white">OS</span> Documental</span>
+                <input type="checkbox" name="modulo[]" value="estandarizacion-223" />
+                <span class="checkbox-label">FoliOS Estandarización 223</span>
               </label>
 
             </div>
@@ -475,19 +592,51 @@
             </select>
           </div>
 
+          <!-- Carga opcional de informe PDF -->
+          <div class="form-group">
+            <label for="field-informe" class="form-label">
+              Informe ambiental de referencia (opcional)
+            </label>
+            <label for="field-informe" class="form-fileinput" id="fileinput-label">
+              <span class="fileinput-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 16V4M12 4l-4 4M12 4l4 4"/>
+                  <path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/>
+                </svg>
+              </span>
+              <span class="fileinput-content">
+                <span class="fileinput-title" id="fileinput-title">Adjuntar PDF</span>
+                <span class="fileinput-hint" id="fileinput-hint">Solo archivos .pdf · Máx. 10 MB</span>
+              </span>
+            </label>
+            <input type="file"
+                   name="informe_pdf"
+                   id="field-informe"
+                   accept=".pdf"
+                   class="form-file-hidden" />
+          </div>
+
           <!-- Submit -->
           <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px">
-            Solicitar acceso demo
+            Solicitar validación técnica
           </button>
+
+          <!-- Nota legal -->
+          <p class="form-legal">
+            No cargues información confidencial o sensible sin autorización.
+            Esta demo será utilizada únicamente para evaluar factibilidad
+            técnica y alcance operacional del procesamiento.
+          </p>
 
         </form>
 
         <!-- Mensaje de éxito (oculto hasta el envío) -->
         <div id="form-success" class="form-success" role="status" aria-live="polite">
           <div class="success-icon" aria-hidden="true">✓</div>
-          <h3 class="success-title">¡Solicitud recibida!</h3>
+          <h3 class="success-title">Solicitud recibida</h3>
           <p class="success-body">
-            Solicitud recibida. Pronto habilitaremos el acceso demo de Foli<span class="text-green">OS</span>.
+            Iniciaremos la validación técnica del informe y te enviaremos
+            la cotización correspondiente al entregable.
           </p>
         </div>
 
@@ -498,7 +647,7 @@
 
 
   <!-- ══════════════════════════════════════════════════════
-       SECCIÓN 6 — PROPUESTA DE VALOR
+       SECCIÓN 8 — PROPUESTA DE VALOR
   ══════════════════════════════════════════════════════ -->
   <section class="section-value" id="section-value" aria-label="Propuesta de valor">
     <div class="container">
@@ -506,36 +655,52 @@
       <div class="section-header text-center">
         <p class="narrative-label fade-in">Lo que cambia</p>
         <h2 class="section-title fade-up">
-          Menos tiempo. Menos errores.<br>Más trazabilidad.
+          Menos fricción. Más control.<br>Trazabilidad operacional.
         </h2>
       </div>
 
       <div class="value-grid">
 
         <div class="value-card fade-up stagger-1">
-          <span class="value-icon" aria-hidden="true">⚡</span>
-          <h3 class="value-title">Menos tiempo operativo</h3>
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L4 14h7l-2 8 10-12h-7z"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Velocidad de procesamiento</h3>
           <p class="value-desc">
-            Automatiza tareas repetitivas de carga, estructuración y preparación
-            de datos que hoy consumen horas de trabajo manual.
+            Automatización con validación técnica que reduce horas hombre
+            sobre tareas repetitivas de transcripción, estructuración y carga.
           </p>
         </div>
 
         <div class="value-card fade-up stagger-2">
-          <span class="value-icon" aria-hidden="true">🎯</span>
-          <h3 class="value-title">Menos errores de carga</h3>
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7h18M3 12h18M3 17h18"/>
+              <circle cx="7" cy="7" r="1.5"/>
+              <circle cx="15" cy="12" r="1.5"/>
+              <circle cx="10" cy="17" r="1.5"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Estandarización de datos</h3>
           <p class="value-desc">
-            Procesos estandarizados y validados reducen los errores típicos
-            de transcripción, formato y estructura de datos.
+            Procesos deterministas, estandarizados y validados sobre cada
+            entregable. Sin errores operacionales típicos de transcripción.
           </p>
         </div>
 
         <div class="value-card fade-up stagger-3">
-          <span class="value-icon" aria-hidden="true">🔗</span>
-          <h3 class="value-title">Mayor trazabilidad ambiental</h3>
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/>
+              <path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Trazabilidad end-to-end</h3>
           <p class="value-desc">
-            Cada dato tiene origen, historial y destino. Flujos documentados
-            y auditables en todo momento.
+            Cada dato tiene origen, transformación y destino registrado.
+            Flujos documentados y auditables a cualquier nivel.
           </p>
         </div>
 
@@ -546,19 +711,19 @@
 
 
   <!-- ══════════════════════════════════════════════════════
-       SECCIÓN 7 — CTA FINAL
+       SECCIÓN 9 — CTA FINAL
   ══════════════════════════════════════════════════════ -->
   <section class="section-cta" aria-label="Llamado a la acción">
     <div class="container">
       <h2 class="section-title fade-up">
-        Automatiza el cumplimiento.<br>Empieza hoy.
+        Automatiza tu cumplimiento ambiental.<br>Empieza con una validación técnica.
       </h2>
       <p class="section-body fade-up stagger-1">
-        Foli<span class="text-green">OS</span> está en desarrollo activo. Únete a la lista de acceso anticipado
-        y sé de los primeros en probar la plataforma.
+        FoliOS opera bajo modelo de validación previa: análisis técnico,
+        complejidad, cotización y procesamiento. Sin compromiso anticipado.
       </p>
       <div class="cta-actions fade-up stagger-2">
-        <a href="#section-demo" class="btn btn-primary">Solicitar acceso demo</a>
+        <a href="#section-demo" class="btn btn-primary">Solicitar validación técnica</a>
         <a href="#section-modules" class="btn btn-ghost">Ver módulos</a>
       </div>
     </div>
@@ -571,14 +736,14 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
 
-      <span class="footer-brand">Foli<span class="text-green">OS</span></span>
+      <span class="footer-brand">FoliOS</span>
 
       <nav class="footer-links" aria-label="Enlace de contacto">
         <a href="mailto:contacto@folios.cl">contacto@folios.cl</a>
       </nav>
 
       <p class="footer-copy">
-        Foli<span class="text-green">OS</span> © 2026 · Plataforma en desarrollo.
+        FoliOS © 2026 · Infraestructura operacional ambiental en desarrollo.
       </p>
 
     </div>
