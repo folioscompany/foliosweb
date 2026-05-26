@@ -204,7 +204,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ──────────────────────────────────────────────────────────
-     7. CONTADOR ANIMADO para las estadísticas
+     7. SECCIÓN DINÁMICA — Información operacional requerida
+  ────────────────────────────────────────────────────────── */
+  const opSection = document.querySelector('#op-section');
+  const opBlocks  = {
+    'biodiversidad':       document.querySelector('#op-biodiversidad'),
+    'agua-seguimiento':    document.querySelector('#op-agua-seguimiento'),
+    'agua-sisrel':         document.querySelector('#op-agua-sisrel'),
+    'estandarizacion-223': document.querySelector('#op-estandarizacion-223'),
+  };
+
+  function updateOpSection() {
+    const checkboxes = document.querySelectorAll('input[name="modulo[]"]');
+    let anyChecked = false;
+
+    checkboxes.forEach(cb => {
+      const block = opBlocks[cb.value];
+      if (!block) return;
+      block.hidden = !cb.checked;
+      if (cb.checked) anyChecked = true;
+    });
+
+    if (opSection) opSection.classList.toggle('visible', anyChecked);
+  }
+
+  document.querySelectorAll('input[name="modulo[]"]').forEach(cb => {
+    cb.addEventListener('change', updateOpSection);
+  });
+
+  updateOpSection();
+
+
+  /* ──────────────────────────────────────────────────────────
+     8. CONTADOR ANIMADO para las estadísticas
   ────────────────────────────────────────────────────────── */
   const counters = document.querySelectorAll('[data-count]');
 

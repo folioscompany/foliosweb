@@ -607,6 +607,102 @@
                    class="form-file-hidden" />
           </div>
 
+          <!-- ── Sección dinámica: Información operacional requerida ── -->
+          <div id="op-section" class="op-section" aria-live="polite">
+
+            <div class="op-header">
+              <h3 class="op-title">Información operacional requerida</h3>
+              <p class="op-sub">Estos datos permiten validar y estructurar correctamente la información para procesamiento automatizado.</p>
+            </div>
+
+            <!-- Biodiversidad -->
+            <div id="op-biodiversidad" class="op-block" hidden>
+              <p class="op-module-label">FoliOS Biodiversidad</p>
+              <div class="op-grid">
+                <div class="form-group">
+                  <label for="bio-rca" class="form-label">RCA asociada</label>
+                  <input type="text" id="bio-rca" name="bio_rca" class="form-input" placeholder="Ej: RCA N° 123/2018">
+                </div>
+                <div class="form-group">
+                  <label for="bio-proyecto" class="form-label">Proyecto / Centro</label>
+                  <input type="text" id="bio-proyecto" name="bio_proyecto" class="form-input" placeholder="Ej: Centro Valverde 6">
+                </div>
+                <div class="form-group">
+                  <label for="bio-estaciones" class="form-label">Estaciones de monitoreo</label>
+                  <input type="text" id="bio-estaciones" name="bio_estaciones" class="form-input" placeholder="Ej: 4 estaciones">
+                </div>
+                <div class="form-group">
+                  <label for="bio-metodologia" class="form-label">Metodología de muestreo</label>
+                  <input type="text" id="bio-metodologia" name="bio_metodologia" class="form-input" placeholder="Ej: Draga Van Veen, Red Surber">
+                </div>
+                <div class="form-group">
+                  <label for="bio-superficie" class="form-label">Superficie de muestreo</label>
+                  <input type="text" id="bio-superficie" name="bio_superficie" class="form-input" placeholder="Ej: 0.1 m²">
+                </div>
+                <div class="form-group">
+                  <label for="bio-ubicacion" class="form-label">Ubicación</label>
+                  <input type="text" id="bio-ubicacion" name="bio_ubicacion" class="form-input" placeholder="Ej: Río Bueno, Región de Los Lagos">
+                </div>
+              </div>
+            </div>
+
+            <!-- Agua — Seguimiento Ambiental -->
+            <div id="op-agua-seguimiento" class="op-block" hidden>
+              <p class="op-module-label">FoliOS Agua — Seguimiento Ambiental</p>
+              <div class="op-grid">
+                <div class="form-group">
+                  <label for="agua-rca" class="form-label">RCA asociada</label>
+                  <input type="text" id="agua-rca" name="agua_rca" class="form-input" placeholder="Ej: RCA N° 456/2020">
+                </div>
+                <div class="form-group">
+                  <label for="agua-estaciones" class="form-label">Estaciones de monitoreo</label>
+                  <input type="text" id="agua-estaciones" name="agua_estaciones" class="form-input" placeholder="Ej: 3 estaciones">
+                </div>
+                <div class="form-group">
+                  <label for="agua-uf" class="form-label">Unidad fiscalizable</label>
+                  <input type="text" id="agua-uf" name="agua_unidad_fiscalizable" class="form-input" placeholder="Ej: Piscicultura Los Maitenes">
+                </div>
+                <div class="form-group">
+                  <label for="agua-considerando" class="form-label">Considerando</label>
+                  <input type="text" id="agua-considerando" name="agua_considerando" class="form-input" placeholder="Ej: Considerando 3.2">
+                </div>
+                <div class="form-group op-full-width">
+                  <label for="agua-transcripcion" class="form-label">Transcripción literal del considerando</label>
+                  <textarea id="agua-transcripcion" name="agua_transcripcion" class="form-input form-textarea" rows="3" placeholder="Pega aquí el texto literal del considerando…"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agua — SISREL -->
+            <div id="op-agua-sisrel" class="op-block" hidden>
+              <p class="op-module-label">FoliOS Agua — SISREL</p>
+              <div class="op-grid">
+                <div class="form-group">
+                  <label for="sisrel-rca" class="form-label">RCA asociada</label>
+                  <input type="text" id="sisrel-rca" name="sisrel_rca" class="form-input" placeholder="Ej: RCA N° 789/2019">
+                </div>
+                <div class="form-group">
+                  <label for="sisrel-rpm" class="form-label">RPM asociada</label>
+                  <input type="text" id="sisrel-rpm" name="sisrel_rpm" class="form-input" placeholder="Ej: RPM N° 12/2021">
+                </div>
+                <div class="form-group">
+                  <label for="sisrel-punto" class="form-label">Punto de monitoreo</label>
+                  <input type="text" id="sisrel-punto" name="sisrel_punto" class="form-input" placeholder="Ej: Punto E-1">
+                </div>
+                <div class="form-group">
+                  <label for="sisrel-descarga" class="form-label">Tipo de descarga</label>
+                  <input type="text" id="sisrel-descarga" name="sisrel_descarga" class="form-input" placeholder="Ej: RILES, AASS o ambos">
+                </div>
+              </div>
+            </div>
+
+            <!-- Estandarización 223 -->
+            <div id="op-estandarizacion-223" class="op-block" hidden>
+              <p class="op-module-note">Para este módulo, la información requerida debe estar contenida en el informe PVA cargado.</p>
+            </div>
+
+          </div><!-- /op-section -->
+
           <!-- Submit -->
           <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px">
             Solicitar validación técnica
