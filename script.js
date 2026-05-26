@@ -234,6 +234,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateOpSection();
 
+  // PDF del RPM (SISREL) — mismo patrón que el informe principal
+  const rpmInput = document.querySelector('#sisrel-rpm-file');
+  const rpmLabel = document.querySelector('#sisrel-rpm-label');
+  const rpmTitle = document.querySelector('#sisrel-rpm-title');
+  const rpmHint  = document.querySelector('#sisrel-rpm-hint');
+
+  if (rpmInput && rpmLabel) {
+    rpmInput.addEventListener('change', () => {
+      const file = rpmInput.files && rpmInput.files[0];
+      if (file) {
+        rpmLabel.classList.add('has-file');
+        if (rpmTitle) rpmTitle.textContent = file.name;
+        if (rpmHint)  rpmHint.textContent  = `${(file.size / 1048576).toFixed(2)} MB · Listo para enviar`;
+      } else {
+        rpmLabel.classList.remove('has-file');
+        if (rpmTitle) rpmTitle.textContent = 'Adjuntar RPM en PDF';
+        if (rpmHint)  rpmHint.textContent  = 'Solo archivos .pdf · Máx. 10 MB';
+      }
+    });
+  }
+
 
   /* ──────────────────────────────────────────────────────────
      8. CONTADOR ANIMADO para las estadísticas
